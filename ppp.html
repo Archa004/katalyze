@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>square, cube, square root , cubre root, log , sin, cos, tan </p>
+    <div
+      style="
+        border: 3px solid rgb(129, 125, 125);
+        margin: 10% 30%;
+        padding: 6%;
+        background-color: cornflowerblue;
+      "
+      id="container"
+    >
+      INPUT 1 <input id="input1" type="number" />
+      <br />
+      <br />
+      INPUT 2<input id="input2" type="number" />
+      <br />
+      <br />
+      <div style="display: flex;">
+        <button onclick="addplease()" style="padding: 1px 10px;font-size: 25px;font-weight: 900;">+</button>
+        <button onclick="subplease()"  style="padding: 1px 10px;font-size: 25px;font-weight: 900;">-</button>
+        <button onclick="multiplease()"  style="padding: 1px 10px;font-size: 25px;font-weight: 900;">*</button>
+        <button onclick="devidplease()"  style="padding: 1px 10px;font-size: 25px;font-weight: 900;">\</button>
+        <button onclick="reminderplease()"  style="padding: 1px 10px;font-size: 25px;font-weight: 900;">%</button>
+      </div>
+      <br />
+
+      <hr />
+
+      <br />
+      <p><strong>RESULT : </strong><span id="result"></span></p>
+    </div>
+
+
+
+    <script>
+      const heigth = document.getElementById('input1');
+      const weight = document.getElementById('input2');
+      const res = document.getElementById('result');
+      const button = document.getElementById('btn');
+      const conbt = document.getElementById('container');
+
+     
+
+      function addplease(){
+       res.innerText = +heigth.value + +weight.value;
+       setInterval(()=>{
+        conbt.style.backgroundColor = ("#"+Math.random()*999999).toString().split('.')[0];
+        conbt.style.borderRadius = (Math.random()*99).toString().split('.')[0]+"%"
+       },500)
+      }
+
+      function subplease(){
+        res.innerText = heigth.value-weight.value;
+      }
+
+      function multiplease(){
+        res.innerText = heigth.value*weight.value;
+      }
+
+      function devidplease(){
+        res.innerText = heigth.value/weight.value;
+      }
+
+      function reminderplease(){
+        res.innerText = heigth.value%weight.value;
+      }
+
+
+
+    </script>
+  </body>
+</html>
